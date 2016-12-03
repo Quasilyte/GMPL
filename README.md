@@ -8,19 +8,19 @@ float = int "." int
 top_level = statement*
 
 statement = assign
-          | yield
+          | expr_block
 
 assign = id "=" rvalue
 
-yield = "{" expr "}"
-
-rvalue = operand
+rvalue = expr_block
        | fn_call
+
+expr_block = "{" expr "}"
 
 operand = id
         | float
-	| int
-	| "(" expr ")"
+        | int
+        | "(" expr ")"
 
 expr = operand
      | unary_op operand
@@ -28,10 +28,10 @@ expr = operand
 
 binary_op = "+"
           | "-"
-	  | "*"
-	  | "/"
-	  | "^"
-	  ... and others
+          | "*"
+          | "/"
+          | "^"
+          ... and others
 
 unary_op = "-"
 
