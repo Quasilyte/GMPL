@@ -69,8 +69,8 @@ y = abs(y)
 
 ```
 x = 10
-x = {x + 1} // x is now 11
+x = {x + 1} // x is now 11 (original "x" is shadowed, new "x" is created)
 y = sin(x)
-{x^y + z!} // z should be externally bounded
-{y} // Second return value
+{x^y + z!}  // z should be externally bounded
+{y + x}     // Second return value
 ```
