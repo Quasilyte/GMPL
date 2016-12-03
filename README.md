@@ -64,3 +64,13 @@ y = abs(y)
 // But in case of abs there is better option
 { |x| + |y| }
 ```
+
+### Examples
+
+```
+x = 10
+x = {x + 1} // x is now 11
+y = sin(x)
+{x^y + z!} // z should be externally bounded
+{y} // Second return value
+```
